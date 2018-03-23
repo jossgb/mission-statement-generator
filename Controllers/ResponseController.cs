@@ -83,7 +83,7 @@ namespace meeting_bs_generator.Controllers
 
             if (!validCertification)
             {
-                HttpContext.Response.StatusCode = 333;
+                HttpContext.Response.StatusCode = 400;
                 return new SkillResponse();
             }
 
@@ -93,9 +93,11 @@ namespace meeting_bs_generator.Controllers
 
             if (!timestampValid)
             {
-                HttpContext.Response.StatusCode = 444;
+                HttpContext.Response.StatusCode = 400;
                 return new SkillResponse();
             }
+
+            return SkillResponseHelper.EndSessionWithMessage(value.Request.Type + " blah lah");
 
             switch (value.Request.Type)
             {
