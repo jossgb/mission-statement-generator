@@ -1,0 +1,17 @@
+/Users/joss/Documents/Programming Projects/meeting-bs-generator/bin/Debug/netcoreapp1.1/meeting-bs-generator.deps.json
+/Users/joss/Documents/Programming Projects/meeting-bs-generator/bin/Debug/netcoreapp1.1/meeting-bs-generator.runtimeconfig.json
+/Users/joss/Documents/Programming Projects/meeting-bs-generator/bin/Debug/netcoreapp1.1/meeting-bs-generator.runtimeconfig.dev.json
+/Users/joss/Documents/Programming Projects/meeting-bs-generator/bin/Debug/netcoreapp1.1/meeting-bs-generator.dll
+/Users/joss/Documents/Programming Projects/meeting-bs-generator/bin/Debug/netcoreapp1.1/meeting-bs-generator.pdb
+/Users/joss/Documents/Programming Projects/meeting-bs-generator/obj/Debug/netcoreapp1.1/meeting-bs-generator.AssemblyInfo.cs
+/Users/joss/Documents/Programming Projects/meeting-bs-generator/obj/Debug/netcoreapp1.1/meeting-bs-generator.dll
+/Users/joss/Documents/Programming Projects/meeting-bs-generator/obj/Debug/netcoreapp1.1/meeting-bs-generator.pdb
+/Users/joss/Dev/mission-statement-generator/bin/Debug/netcoreapp1.1/meeting-bs-generator.deps.json
+/Users/joss/Dev/mission-statement-generator/bin/Debug/netcoreapp1.1/meeting-bs-generator.runtimeconfig.json
+/Users/joss/Dev/mission-statement-generator/bin/Debug/netcoreapp1.1/meeting-bs-generator.runtimeconfig.dev.json
+/Users/joss/Dev/mission-statement-generator/obj/Debug/netcoreapp1.1/meeting-bs-generator.csproj.CoreCompileInputs.cache
+/Users/joss/Dev/mission-statement-generator/obj/Debug/netcoreapp1.1/meeting-bs-generator.AssemblyInfo.cs
+/Users/joss/Dev/mission-statement-generator/obj/Debug/netcoreapp1.1/meeting-bs-generator.dll
+/Users/joss/Dev/mission-statement-generator/obj/Debug/netcoreapp1.1/meeting-bs-generator.pdb
+/Users/joss/Dev/mission-statement-generator/bin/Debug/netcoreapp1.1/meeting-bs-generator.dll
+/Users/joss/Dev/mission-statement-generator/bin/Debug/netcoreapp1.1/meeting-bs-generator.pdb
