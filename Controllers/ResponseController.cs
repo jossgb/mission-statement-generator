@@ -90,7 +90,7 @@ namespace meeting_bs_generator.Controllers
 
             if (!validCertification)
             {
-                HttpContext.Response.StatusCode = 400;
+                HttpContext.Response.StatusCode = 333;
                 return new SkillResponse();
             }
 
@@ -100,7 +100,7 @@ namespace meeting_bs_generator.Controllers
 
             if (!timestampValid)
             {
-                HttpContext.Response.StatusCode = 400;
+                HttpContext.Response.StatusCode = 444;
                 return new SkillResponse();
             }
 
