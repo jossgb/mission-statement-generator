@@ -52,13 +52,6 @@ namespace meeting_bs_generator.Controllers
             buzzWords[random.Next(0, buzzWords.Length)]);
 
             return s;
-            // var sopening = opening[random.Next(0, opening.Length)];
-            // var sadverb = adverbs[random.Next(0, adverbs.Length)];
-            // var sverb = verbs[random.Next(0, verbs.Length)];
-            // var sadj = adjective[random.Next(0, adjective.Length)];
-            // var snoun = nouns[random.Next(0, nouns.Length)];
-
-            // return sopening + " " + sadverb + " " + sverb + " " + sadj + " " + snoun;
         }
 
         [HttpGet("{projectName}")]
