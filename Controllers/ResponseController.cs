@@ -96,18 +96,17 @@ namespace meeting_bs_generator.Controllers
                 HttpContext.Response.StatusCode = 400;
                 return new SkillResponse();
             }
+            
+             switch (value.Request.Type)
+             {
+                 case "LaunchRequest":
+                     return SkillResponseHelper.RespondWithHelpMesseage();
 
-            return SkillResponseHelper.EndSessionWithMessage(Get());
+                 case "SessionEndedRequest":
+                     return SkillResponseHelper.EndSessionWithMessage("Goodbye");
+             }
 
-            // switch (value.Request.Type)
-            // {
-            //     case "LaunchRequest":
-            //         return SkillResponseHelper.EndSessionWithMessage(Get());
-
-            //     case "SessionEndedRequest":
-            //         return SkillResponseHelper.EndSessionWithMessage("Goodbye");
-            // }
-
+   return SkillResponseHelper.EndSessionWithMessage(Get());
 
 
             // if (value.Request.Intent.Name == "AMAZON.HelpIntent")
