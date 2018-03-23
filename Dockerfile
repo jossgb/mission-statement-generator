@@ -3,7 +3,7 @@ WORKDIR /source
 
 COPY . .
 RUN dotnet restore
-RUN dotnet publish --output /app/ --configuration Debug
+RUN dotnet publish --output /app/ --configuration Release
 
 FROM microsoft/aspnetcore
 WORKDIR /app
