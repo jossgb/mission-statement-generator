@@ -107,7 +107,7 @@ namespace meeting_bs_generator.Controllers
             switch (value.Request.Type)
             {
                 case "LaunchRequest":
-                    return SkillResponseHelper..EndSessionWithMessage(Get());
+                    return SkillResponseHelper.EndSessionWithMessage(Get());
 
                 case "SessionEndedRequest":
                     return SkillResponseHelper.EndSessionWithMessage("Goodbye");
