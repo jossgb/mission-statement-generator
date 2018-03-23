@@ -35,7 +35,7 @@ namespace meeting_bs_generator.Helpers
 
             outputSpeech.Ssml = "<speak>" + message + "</speak>";
             rv.Response.OutputSpeech = outputSpeech;
-
+    
             return rv;
         }
 
