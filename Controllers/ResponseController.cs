@@ -61,6 +61,11 @@ namespace meeting_bs_generator.Controllers
             // return sopening + " " + sadverb + " " + sverb + " " + sadj + " " + snoun;
         }
 
+        [HttpGet("{projectName}")]
+        public string Get(string projectName)
+        {
+            return (Get());
+        }
 
         [HttpPost]
         public SkillResponse Post()
@@ -86,7 +91,6 @@ namespace meeting_bs_generator.Controllers
             if (!validCertification)
             {
                 HttpContext.Response.StatusCode = 400;
-                
                 return new SkillResponse();
             }
 
@@ -100,9 +104,46 @@ namespace meeting_bs_generator.Controllers
                 return new SkillResponse();
             }
 
+            switch (value.Request.Type)
+            {
+                case "LaunchRequest":
+                    return SkillResponseHelper..EndSessionWithMessage(Get());
 
+                case "SessionEndedRequest":
+                    return SkillResponseHelper.EndSessionWithMessage("Goodbye");
+            }
+
+
+
+            if (value.Request.Intent.Name == "AMAZON.HelpIntent")
+            {
+                return SkillResponseHelper.RespondWithHelpMesseage();
+            }
+            else if (value.Request.Intent.Name == "AMAZON.StopIntent")
+            {
+                return SkillResponseHelper.EndSessionWithMessage("Goodbye");
+            }
+            else if (value.Request.Intent.Name == "AMAZON.CancelIntent")
+            {
+                return SkillResponseHelper.EndSessionWithMessage("Goodbye");
+            }
+            else if (value.Request.Intent.Name == "projectResponse")
+            {
+                var projectName = value.Request.Intent.Slots["projectName"].Value;
+                if (String.IsNullOrEmpty(projectName))
+                {
+                    return SkillResponseHelper.EndSessionWithMessage(Get());
+                }
+                else
+                {
+                    return SkillResponseHelper.EndSessionWithMessage(Get(projectName));
+                }
+            }
+            else
+            {
                 return SkillResponseHelper.EndSessionWithMessage(Get());
 
+            }
         }
 
         private string mainText = "Our strategy is {0}. We will lead a {1} effort of the market through our use of {2} and {3}  to build a {4}. By being both {5} and {6}, our {7} approach will drive {8} throughout the organisation. Synergies between our {9} and {10} will enable us to capture the upside by becoming {11} in a {12} world. These transformations combined with {13} due to our {14} will create a {15} through {16} and {17}";
