@@ -51,7 +51,7 @@ namespace meeting_bs_generator.Helpers
 
         public static SkillResponse RespondWithHelpMesseage()
         {
-            var instructionMesesage = "Need a strategy? Can't be bothered to understand your landscape? Don't care about situational awareness or gameplay? Need it fast? Minimal effort? No problem! Simpy ask mission statement for a mission statement or strategy, and I will work it out for you!";
+            var instructionMesesage = "Need a strategy? Can't be bothered to understand your landscape? Don't care about situational awareness or gameplay? Need it fast? Minimal effort? No problem! Simpy ask mission statement for a mission statement or strategy, and I will work it out for you! Would you like me to generate a strategy for you?";
             var rv = SkillResponseHelper.CreateBaseResponse(false);
             var outputSpeech = new SsmlOutputSpeech();
 

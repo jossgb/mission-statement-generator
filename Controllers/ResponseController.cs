@@ -106,22 +106,26 @@ namespace meeting_bs_generator.Controllers
                      return SkillResponseHelper.EndSessionWithMessage("Goodbye");
              }
 
-   return SkillResponseHelper.EndSessionWithMessage(Get());
+ 
 
 
-            // if (value.Request.Intent.Name == "AMAZON.HelpIntent")
-            // {
-            //     return SkillResponseHelper.RespondWithHelpMesseage();
-            // }
-            // else if (value.Request.Intent.Name == "AMAZON.StopIntent")
-            // {
-            //     return SkillResponseHelper.EndSessionWithMessage("Goodbye");
-            // }
-            // else if (value.Request.Intent.Name == "AMAZON.CancelIntent")
-            // {
-            //     return SkillResponseHelper.EndSessionWithMessage("Goodbye");
-            // }
-            // else if (value.Request.Intent.Name == "projectResponse")
+            if (value.Request.Intent.Name == "AMAZON.HelpIntent")
+            {
+                return SkillResponseHelper.RespondWithHelpMesseage();
+             }
+             else if (value.Request.Intent.Name == "AMAZON.StopIntent")
+             {
+                 return SkillResponseHelper.EndSessionWithMessage("Goodbye");
+             }
+             else if (value.Request.Intent.Name == "AMAZON.CancelIntent")
+             {
+                 return SkillResponseHelper.EndSessionWithMessage("Goodbye");
+             } else {
+                 
+              return SkillResponseHelper.EndSessionWithMessage(Get());
+              
+              }
+              //")
             // {
             //     var projectName = value.Request.Intent.Slots["projectName"].Value;
             //     if (String.IsNullOrEmpty(projectName))
