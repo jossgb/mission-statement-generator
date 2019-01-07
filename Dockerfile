@@ -1,11 +1,9 @@
-FROM microsoft/aspnetcore-build AS builder
-WORKDIR /source
-
+# Use the standard Microsoft .NET Core container
+FROM microsoft/dotnet
+WORKDIR /app  
 COPY . .
-RUN dotnet restore
-RUN dotnet publish --output /app/ --configuration Release
 
-FROM microsoft/aspnetcore
-WORKDIR /app
-COPY --from=builder /app .
-ENTRYPOINT ["dotnet", "meeting-bs-generator.dll"]
+RUN dotnet restore \
+    && dotnet build
+ 
+CMD dotnet run --server.urls http://0.0.0.0:$PORT

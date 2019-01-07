@@ -51,7 +51,7 @@ namespace meeting_bs_generator.Helpers
 
         public static SkillResponse RespondWithHelpMesseage()
         {
-            var instructionMesesage = "Need a strategy? Can't be bothered to understand your landscape? Don't care about situational awareness or gameplay? Need it fast? Minimal effort? No problem! Simpy ask mission statement for a mission statement or strategy, and I will work it out for you! Would you like me to generate a strategy for you?";
+            var instructionMesesage = "Meeting response helps you create a response during a meeting where you aren't paying attention. To generate a response, simply say 'Alexa, ask meeting response to respond about project example', where example is the name of a project. Meeting response will then generate a suitably vague answer.";
             var rv = SkillResponseHelper.CreateBaseResponse(false);
             var outputSpeech = new SsmlOutputSpeech();
 
